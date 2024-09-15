@@ -1,0 +1,203 @@
+/* Global Styles */
+body {
+    font-family: Cambria;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    box-shadow: #4e6175;
+}
+header {
+    background-color: #1e3c72;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#creator_name {
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.section {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    border-bottom: 3px solid #2a5298;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+label {
+    font-size: 1.5rem;
+    color: #1e3c72;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    background-color: #f0f4f8;
+}
+
+input:focus, textarea:focus {
+    border-color: #1e3c72;
+    outline: none;
+    background-color: #fff;
+}
+/* Center the buttons and paragraph within the container */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px 0; /* Add space between buttons */
+    padding: 10px 20px; /* Add padding for a better appearance */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+#shareable-link {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    word-break: break-all; /* Ensure long links break correctly */
+}
+
+/* Resume Output Styles */
+#resume-output {
+    margin-top: 10px;
+    padding: 30px;
+    background-color: #fdfdfd;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+#resume-output h1 {
+    font-size: 2.5em;
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+#resume-output h2 {
+    font-size: 2em;
+    color: #2a5298;
+    border-bottom: 2px solid #1e3c72;
+}
+
+#resume-output p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.skill-badge {
+    display: inline-block;
+    background-color: #1e3c72;
+    color: white;
+    padding: 7px 12px;
+    margin: 5px 5px 0 0;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Add styles for profile picture */
+#profile-picture-output img {
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the resume container to fit A4 size */
+#resume-output {
+    width: 21cm; /* A4 width in cm */
+    height: 29.7cm; /* A4 height in cm */
+    margin: 0 auto; /* Center align */
+    padding: .5cm; /* Add some padding */
+    box-sizing: border-box;
+}
+
+/* Style for the profile picture to ensure it fits well */
+#profile-picture-output img {
+    width: 100%; /* Make sure the image scales to the container */
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    display: block; /* Ensure the image is block-level */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Style for sections to have minimal spacing */
+.section {
+    margin-bottom: 0.5cm; /* Minimal margin between sections */
+    padding: 0; /* Remove padding */
+}
+
+/* Ensure headings and text are appropriately styled */
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add some spacing between different sections */
+h2 {
+    margin-top: .5cm; /* Top margin for headings */
+    margin-bottom: 0.5cm; /* Bottom margin for headings */
+}
+
