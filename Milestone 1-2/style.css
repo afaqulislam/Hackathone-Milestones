@@ -156,7 +156,7 @@ button:hover {
 @media (max-width: 480px) {
     .resume-container {
         width: 95%;
-        height: 90%;
+        height: 70%;
         padding: 0.5rem;
     }
     .left-section {
