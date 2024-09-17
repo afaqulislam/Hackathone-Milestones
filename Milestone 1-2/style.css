@@ -101,7 +101,7 @@ button:hover {
 @media (max-width: 1024px) {
     .resume-container {
         width: 80%;
-        height: 100vh;
+        height: 80%;
         }
     .left-section {
         width: 40%;
@@ -124,7 +124,7 @@ button:hover {
 @media (max-width: 768px) {
     .resume-container {
         width: 90%;
-        height: 100vh;
+        height: 90%;
         padding: 1rem;
     }
     .left-section {
@@ -156,7 +156,7 @@ button:hover {
 @media (max-width: 480px) {
     .resume-container {
         width: 95%;
-        height: 100vh;
+        height: 90%;
         padding: 0.5rem;
     }
     .left-section {
