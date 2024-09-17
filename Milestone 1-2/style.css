@@ -1,84 +1,174 @@
 /* General Styling */
+
+html {
+    font-size: 62.5%;
+    font-weight: 750;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 150px;
+    margin: 0 2rem;
+    padding: 10rem 0;
 }
 
 .resume-container {
     display: flex;
     background-color: white;
-    width: 80%;
+    width: 60%;
+    height: 100vh;
     margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    flex-direction: row; /* Maintain side-by-side layout */
 }
 
 /* Left Section Styling */
 .left-section {
     background-color: #2c2c2c;
     color: white;
-    padding: 20px;
+    padding: .2rem;
     width: 35%;
     text-align: center;
-    border-right: 5px solid #219ebc;
+    justify-content: center;
+    border-right: .5rem solid #219ebc;
+}
+
+#objective, #certification {
+    margin: 2rem;
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
+    width: 15rem;
+    height: 15rem;
     margin-top: 10%;
     border-radius: 50%;
-    border: 5px solid #219ebc;
-    margin-bottom: 20px;
+    border: .5rem solid #219ebc;
+    margin-bottom: .2rem;
 }
 
 h1 {
-    font-size: 24px;
-    margin: 10px 0;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
     padding: 2%;
-    margin: 20px 0 10px;
+    margin: 0 1rem;
     color: black;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #219ebc;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem #219ebc;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
 ul {
     list-style-type: fill round;
-    padding: 10;
-    margin: 10px 0;
+    padding: 1;
+    margin: 1rem 0;
 }
 
 ul li {
-    margin: 5px 0;
+    margin: .5rem 0;
 }
 
 /* Right Section Styling */
 .right-section {
-    padding: 20px;
+    padding: 2rem;
     width: 65%;
 }
 
 button {
     font-family: Arial, sans-serif;
-    border-radius: 10px;
-    box-shadow: 0 0 15px black;
-    box-shadow: 0 0 10px #219ebc;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem black;
+    box-shadow: 0 0 1rem #219ebc;
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 1rem;
+    font-size: 1.8rem;
     transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: #219ebc;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 1024px) {
+    .resume-container {
+        width: 80%;
+    }
+    .left-section {
+        width: 40%;
+    }
+    .right-section {
+        width: 60%;
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+    .left-section {
+        width: 35%;
+    }
+    .right-section {
+        width: 65%;
+        padding: 1rem;
+    }
+    .profile-picture {
+        width: 12rem;
+        height: 12rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    button {
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-container {
+        width: 95%;
+        height: auto;
+        padding: 0.5rem;
+    }
+    .left-section {
+        width: 35%;
+    }
+    .right-section {
+        width: 65%;
+    }
+    .profile-picture {
+        width: 10rem;
+        height: 10rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 1.4rem;
+    }
 }
