@@ -1,10 +1,6 @@
-const toggleButton = document.getElementById('toggle-skills') as HTMLButtonElement
-const skills = document.getElementById('skills') as HTMLElement
+const button = document.getElementById('toggle-skills') as HTMLButtonElement;
+const skillsSection = document.getElementById('skills') as HTMLElement;
 
-toggleButton.addEventListener('click', ()=> {
-    if(skills.style.display === 'none') {
-        skills.style.display = 'block'
-    } else {
-        skills.style.display = 'none'
-    }
+button.addEventListener('click', () => {
+    skillsSection.style.display = skillsSection.style.display === 'none' ? 'block' : 'none';
 });

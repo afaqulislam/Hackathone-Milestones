@@ -1,33 +1,84 @@
 /* General Styling */
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 html {
-    font-size: 65.5%;
-    font-weight: 750;
+    font-size: 62.5%;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0 2rem;
-    padding: 10rem 0;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide overflow for smooth animation */
+    background: #219ebc;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Added space around the container */
+}
+
+/* Water-like background animation */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: waterWave 6s linear infinite;
+    pointer-events: none;
+    z-index: -1; /* Ensure the animation stays behind everything */
+}
+
+/* First wave */
+body::before {
+    transform: translate(-50%, -50%) scale(1);
+    animation-duration: 7s;
+}
+
+/* Second wave with slightly different speed and direction */
+body::after {
+    transform: translate(-50%, -50%) scale(1.2);
+    animation-direction: reverse;
+    animation-duration: 8s;
+}
+
+/* Keyframes for water wave movement */
+@keyframes waterWave {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-45%, -45%) scale(1.05);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 .resume-container {
     display: flex;
-    background-color: white;
+    background-color: #FFFFFF ;
     width: 60%;
-    height: 100vh;
+    height: 80%; /* Adjust height for more space */
     margin: 0 auto;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
-    flex-direction: row; /* Maintain side-by-side layout */
+    flex-direction: row;
+    position: relative;
+    z-index: 1; /* Ensure the resume content stays above the background animation */
+    padding: 2rem; /* Added padding for spacing within the container */
 }
 
 /* Left Section Styling */
 .left-section {
     background-color: #2c2c2c;
-    color: white;
-    padding: 1.2rem;
+    color: #FFFFFF ;
+    padding: .2rem;
     width: 35%;
     text-align: center;
     justify-content: center;
@@ -36,6 +87,17 @@ body {
 
 #objective, #certification {
     margin: 2rem;
+}
+
+.heading-left{
+    color: #FFFFFF;
+    font-size: 2rem;
+    padding: 2%;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem #219ebc;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .profile-picture {
@@ -47,15 +109,16 @@ body {
     margin-bottom: .2rem;
 }
 
-h1 {
-    font-size: 2.5rem;
+.main-heading {
+    text-transform: uppercase;
+    font-size: 3rem;
     margin: 1rem 0;
     margin-bottom: 3rem;
     text-align: center;
 }
 
-h3 {
-    font-size: 1.8rem;
+.heading-right {
+    font-size: 2rem;
     padding: 2%;
     margin: 0 1rem;
     color: black;
@@ -73,6 +136,9 @@ ul {
 
 ul li {
     margin: .5rem 0;
+}
+.links{
+    color: #219ebc;
 }
 
 /* Right Section Styling */
@@ -97,12 +163,11 @@ button:hover {
 }
 
 /* Responsive Adjustments */
-
 @media (max-width: 1024px) {
     .resume-container {
         width: 80%;
-        height: 90%;
-        }
+        height: 80%;
+    }
     .left-section {
         width: 40%;
     }
@@ -156,7 +221,7 @@ button:hover {
 @media (max-width: 480px) {
     .resume-container {
         width: 95%;
-        height: 70%;
+        height: 90%;
         padding: 0.5rem;
     }
     .left-section {
@@ -176,7 +241,7 @@ button:hover {
         font-size: 1.2rem;
     }
     #objective, #certification {
-    margin: .1rem;
+        margin: .1rem;
     }
     button {
         font-size: 1.4rem;
