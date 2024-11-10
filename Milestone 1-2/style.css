@@ -6,7 +6,7 @@ html {
 
 body {
     font-family: Poppins, Arial, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Hide overflow for smooth animation */
@@ -63,7 +63,7 @@ body::after {
 .resume-container {
     display: flex;
     background-color: #FFFFFF ;
-    width: 60%;
+    width: 20%;
     height: 80%; /* Adjust height for more space */
     margin: 0 auto;
     border-radius: 1rem;
@@ -91,7 +91,7 @@ body::after {
 
 .heading-left{
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 2%;
     margin: 0 1rem;
     border-radius: 1rem;
@@ -111,14 +111,14 @@ body::after {
 
 .main-heading {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin: 1rem 0;
     margin-bottom: 3rem;
     text-align: center;
 }
 
 .heading-right {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 2%;
     margin: 0 1rem;
     color: black;
@@ -154,7 +154,7 @@ button {
     box-shadow: 0 0 1rem #219ebc;
     cursor: pointer;
     margin-top: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
